@@ -1,8 +1,3 @@
 const mysql = require('mysql2')
 
-module.exports = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'rootroot',
-  database: 'todo_db'
-})
+module.exports = mysql.createConnection(process.env.JAWSDB_URL || 'mysql://root:rootroot@localhost/todo_db')
